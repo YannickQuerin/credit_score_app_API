@@ -42,7 +42,7 @@ col1, col2, col3 = st.columns([1,1,1])
 with col1:
     st.sidebar.write("")
 with col2:
-    image = Image.open('C:\\Users\\yanni\\OneDrive\\Bureau\\P7_Modelisation_risque_defaut_credit\\images\\logo_proj7_credit.png')
+    image = Image.open('images/logo_proj7_credit.png')
     st.sidebar.image(image, use_column_width="always")
 with col3:
     st.sidebar.write("")
