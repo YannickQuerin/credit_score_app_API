@@ -3,6 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
+import dask.dataframe as dd
 
 import plotly.graph_objects as go
 import shap
@@ -71,7 +72,7 @@ def load_data(file_path):
 
 @st.cache_data #mise en cache de la fonction pour exécution unique
 def lecture_X_test_original():
-    X_test_original = pd.read_csv("C:\\Users\\yanni\\OneDrive\\Bureau\\P7_Modelisation_risque_defaut_credit\\test_preprocess.csv")
+    X_test_original = pd.read_csv("test_preprocess.parquet")
     X_test_original['DUREE_REMBOURSEMENT'] = round(X_test_original['AMT_CREDIT'] / X_test_original['AMT_ANNUITY'], 0)
     X_test_original['TAUX_ENDETTEMENT'] = (X_test_original['AMT_ANNUITY'] / X_test_original['AMT_INCOME_TOTAL']) * 100
     return X_test_original
