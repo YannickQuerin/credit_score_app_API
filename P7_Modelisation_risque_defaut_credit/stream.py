@@ -412,9 +412,7 @@ if options == "Profil Client":
         df_info_client = pickle.load(open("P7_Modelisation_risque_defaut_credit/pickle_files/df_info_client.pickle", "rb"))
         df_info_client = df_info_client[df_info_client.SK_ID_CURR == ID_client]
 
-        df_pret_client = pickle.load(
-            open("P7_Modelisation_risque_defaut_credit/pickle_files/df_pret_client.pickle",
-                 "rb"))
+        df_pret_client = pickle.load(open("P7_Modelisation_risque_defaut_credit/pickle_files/df_pret_client.pickle", "rb"))
         df_pret_client = df_pret_client[df_pret_client.SK_ID_CURR == ID_client]
 
         col1, col2 = st.columns(2)
