@@ -72,14 +72,14 @@ def load_data(file_path):
 
 @st.cache_data #mise en cache de la fonction pour exécution unique
 def lecture_X_test_original():
-    X_test_original = pd.read_csv("test_preprocess.parquet")
+    X_test_original = dd.read_parquet("test_preprocess.parquet")
     X_test_original['DUREE_REMBOURSEMENT'] = round(X_test_original['AMT_CREDIT'] / X_test_original['AMT_ANNUITY'], 0)
     X_test_original['TAUX_ENDETTEMENT'] = (X_test_original['AMT_ANNUITY'] / X_test_original['AMT_INCOME_TOTAL']) * 100
     return X_test_original
 
 @st.cache_data
 def lecture_X_test_clean():
-    X_test_clean = pd.read_csv("C:\\Users\\yanni\\OneDrive\\Bureau\\P7_Modelisation_risque_defaut_credit\\test_set.csv")
+    X_test_clean = dd.read_parquet("test_set.parquet")
     return X_test_clean
 
 
@@ -90,7 +90,7 @@ def lecture_X_test_clean():
 @st.cache_resource
 def calcul_valeurs_shap():
     model_LGBM = pickle.load(
-        open("C:\\Users\\yanni\\OneDrive\\Bureau\\P7_Modelisation_risque_defaut_credit\\pickle_files\\best_model.pickle", "rb"))
+        open("pickle_files/best_model.pickle", "rb"))
     explainer = shap.TreeExplainer(model_LGBM)
     shap_values = explainer.shap_values(lecture_X_test_clean().drop(labels="SK_ID_CURR", axis=1))
     return shap_values
@@ -384,7 +384,7 @@ if options == "Profil Client":
         # Lecture du modèle de prédiction et des scores #
         #################################################
         model_LGBM = pickle.load(
-            open("C:\\Users\\yanni\\OneDrive\\Bureau\\P7_Modelisation_risque_defaut_credit\\pickle_files\\best_model.pickle", "rb"))
+            open("pickle_files/best_model.pickle", "rb"))
         y_pred_lgbm = model_LGBM.predict(
             lecture_X_test_clean().drop(labels="SK_ID_CURR", axis=1))  # Prédiction de la classe 0 ou 1
         y_pred_lgbm_proba = model_LGBM.predict_proba(
@@ -406,11 +406,11 @@ if options == "Profil Client":
         # Récupération et affichage des informations du client #
         ########################################################
         df_info_client = pickle.load(
-            open("C:\\Users\\yanni\\OneDrive\\Bureau\\P7_Modelisation_risque_defaut_credit\\pickle_files\\df_info_client.pickle", "rb"))
+            open("pickle_files/df_info_client.pickle", "rb"))
         df_info_client = df_info_client[df_info_client.SK_ID_CURR == ID_client]
 
         df_pret_client = pickle.load(
-            open("C:\\Users\\yanni\\OneDrive\\Bureau\\P7_Modelisation_risque_defaut_credit\\pickle_files\\df_pret_client.pickle",
+            open("pickle_files/df_pret_client.pickle",
                  "rb"))
         df_pret_client = df_pret_client[df_pret_client.SK_ID_CURR == ID_client]
 
@@ -607,9 +607,9 @@ if options == "Score Client":
 
 
     # Lecture des fichiers de données
-    X_test_original = load_data("C:\\Users\\yanni\\OneDrive\\Bureau\\P7_Modelisation_risque_defaut_credit\\test_preprocess.csv")
-    X_test_clean = load_data("C:\\Users\\yanni\\OneDrive\\Bureau\\P7_Modelisation_risque_defaut_credit\\test_set.csv")
-    description_variables = pd.read_csv("C:\\Users\\yanni\\OneDrive\\Bureau\\P7_Modelisation_risque_defaut_credit\\description_variable.csv", sep=";")
+    X_test_original = dd.read_parquet("test_preprocess.parquet")
+    X_test_clean = dd.read_parquet("test_set.parquet")
+    #description_variables = pd.read_csv("C:\\Users\\yanni\\OneDrive\\Bureau\\P7_Modelisation_risque_defaut_credit\\description_variable.csv", sep=";")
 
     if X_test_original is not None and X_test_clean is not None:
         # Sélecteur d'identifiant de client
@@ -618,7 +618,7 @@ if options == "Score Client":
         st.write("Vous avez sélectionné l'identifiant n° :", ID_client)
 
         # Chargement du modèle et prédiction
-        model_LGBM = pickle.load(open("C:\\Users\\yanni\\OneDrive\\Bureau\\P7_Modelisation_risque_defaut_credit\\pickle_files\\best_model.pickle", "rb"))
+        model_LGBM = pickle.load(open("pickle_files/best_model.pickle", "rb"))
         y_pred_lgbm = model_LGBM.predict(X_test_clean.drop(labels="SK_ID_CURR", axis=1))
         y_pred_lgbm_proba = model_LGBM.predict_proba(X_test_clean.drop(labels="SK_ID_CURR", axis=1))
 
