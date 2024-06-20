@@ -609,7 +609,7 @@ if options == "Score Client":
     # Lecture des fichiers de données
     X_test_original = dd.read_parquet("test_preprocess.parquet")
     X_test_clean = dd.read_parquet("test_set.parquet")
-    #description_variables = pd.read_csv("C:\\Users\\yanni\\OneDrive\\Bureau\\P7_Modelisation_risque_defaut_credit\\description_variable.csv", sep=";")
+    description_variables = pd.read_csv("description_variable.csv", sep=";")
 
     if X_test_original is not None and X_test_clean is not None:
         # Sélecteur d'identifiant de client
