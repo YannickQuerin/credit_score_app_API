@@ -409,8 +409,7 @@ if options == "Profil Client":
         ########################################################
         # Récupération et affichage des informations du client #
         ########################################################
-        df_info_client = pickle.load(
-            open("P7_Modelisation_risque_defaut_credit/pickle_files/df_info_client.pickle", "rb"))
+        df_info_client = pickle.load(open("P7_Modelisation_risque_defaut_credit/pickle_files/df_info_client.pickle", "rb"))
         df_info_client = df_info_client[df_info_client.SK_ID_CURR == ID_client]
 
         df_pret_client = pickle.load(
