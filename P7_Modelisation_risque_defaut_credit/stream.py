@@ -64,7 +64,7 @@ if options == "Accueil":
     """)
 
 # Fonctionnalités partagées
-@st.cache_data
+@st.cache
 def load_data(file_path):
     try:
         data = pd.read_csv(file_path)
@@ -73,7 +73,7 @@ def load_data(file_path):
         st.error(f"Erreur lors de la lecture du fichier {file_path}. Veuillez vérifier le format du fichier.")
         return None
 
-@st.cache_data #mise en cache de la fonction pour exécution unique
+@st.cache #mise en cache de la fonction pour exécution unique
 def lecture_X_test_original():
     X_test_original = dd.read_parquet("P7_Modelisation_risque_defaut_credit/test_preprocess.parquet")
     X_test_original = X_test_original.compute()
@@ -81,7 +81,7 @@ def lecture_X_test_original():
     X_test_original['TAUX_ENDETTEMENT'] = (X_test_original['AMT_ANNUITY'] / X_test_original['AMT_INCOME_TOTAL']) * 100
     return X_test_original
 
-@st.cache_data
+@st.cache
 def lecture_X_test_clean():
     X_test_clean = dd.read_parquet("P7_Modelisation_risque_defaut_credit/test_set.parquet")
     X_test_clean = X_test_clean.compute()
