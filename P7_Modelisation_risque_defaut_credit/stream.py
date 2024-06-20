@@ -46,7 +46,7 @@ col1, col2, col3 = st.columns([1,1,1])
 with col1:
     st.sidebar.write("")
 with col2:
-    image = Image.open('C:\\Users\\yanni\\OneDrive\\Bureau\\P7_Modelisation_risque_defaut_credit\\images\\logo_proj7_credit.png')
+    image = Image.open('images/logo_proj7_credit.png')
     st.sidebar.image(image, use_column_width="always")
 with col3:
     st.sidebar.write("")
@@ -75,7 +75,7 @@ def load_data(file_path):
 
 @st.cache_data #mise en cache de la fonction pour exécution unique
 def lecture_X_test_original():
-    X_test_original = dd.read_parquet("C:\\Users\\yanni\\OneDrive\\Bureau\\P7_Modelisation_risque_defaut_credit\\test_preprocess.parquet")
+    X_test_original = dd.read_parquet("test_preprocess.parquet")
     X_test_original = X_test_original.compute()
     X_test_original['DUREE_REMBOURSEMENT'] = (X_test_original['AMT_CREDIT'] / X_test_original['AMT_ANNUITY']).round(0)
     X_test_original['TAUX_ENDETTEMENT'] = (X_test_original['AMT_ANNUITY'] / X_test_original['AMT_INCOME_TOTAL']) * 100
@@ -83,7 +83,7 @@ def lecture_X_test_original():
 
 @st.cache_data
 def lecture_X_test_clean():
-    X_test_clean = dd.read_parquet("C:\\Users\\yanni\\OneDrive\\Bureau\\P7_Modelisation_risque_defaut_credit\\test_set.parquet")
+    X_test_clean = dd.read_parquet("test_set.parquet")
     X_test_clean = X_test_clean.compute()
     return X_test_clean
 
@@ -95,7 +95,7 @@ def lecture_X_test_clean():
 @st.cache_resource
 def calcul_valeurs_shap():
     model_LGBM = pickle.load(
-        open("C:\\Users\\yanni\\OneDrive\\Bureau\\P7_Modelisation_risque_defaut_credit\\pickle_files\\best_model.pickle", "rb"))
+        open("pickle_files/best_model.pickle", "rb"))
     explainer = shap.TreeExplainer(model_LGBM)
     shap_values = explainer.shap_values(lecture_X_test_clean().drop(labels="SK_ID_CURR", axis=1))
     return shap_values
@@ -389,7 +389,7 @@ if options == "Profil Client":
         # Lecture du modèle de prédiction et des scores #
         #################################################
         model_LGBM = pickle.load(
-            open("C:\\Users\\yanni\\OneDrive\\Bureau\\P7_Modelisation_risque_defaut_credit\\pickle_files\\best_model.pickle", "rb"))
+            open("pickle_files/best_model.pickle", "rb"))
         y_pred_lgbm = model_LGBM.predict(
             lecture_X_test_clean().drop(labels="SK_ID_CURR", axis=1))  # Prédiction de la classe 0 ou 1
         y_pred_lgbm_proba = model_LGBM.predict_proba(
@@ -411,11 +411,11 @@ if options == "Profil Client":
         # Récupération et affichage des informations du client #
         ########################################################
         df_info_client = pickle.load(
-            open("C:\\Users\\yanni\\OneDrive\\Bureau\\P7_Modelisation_risque_defaut_credit\\pickle_files\\df_info_client.pickle", "rb"))
+            open("pickle_files/df_info_client.pickle", "rb"))
         df_info_client = df_info_client[df_info_client.SK_ID_CURR == ID_client]
 
         df_pret_client = pickle.load(
-            open("C:\\Users\\yanni\\OneDrive\\Bureau\\P7_Modelisation_risque_defaut_credit\\pickle_files\\df_pret_client.pickle",
+            open("pickle_files/df_pret_client.pickle",
                  "rb"))
         df_pret_client = df_pret_client[df_pret_client.SK_ID_CURR == ID_client]
 
@@ -612,9 +612,9 @@ if options == "Score Client":
 
 
     # Lecture des fichiers de données
-    X_test_original = dd.read_parquet("C:\\Users\\yanni\\OneDrive\\Bureau\\P7_Modelisation_risque_defaut_credit\\test_preprocess.parquet")
-    X_test_clean = dd.read_parquet("C:\\Users\\yanni\\OneDrive\\Bureau\\P7_Modelisation_risque_defaut_credit\\test_set.parquet")
-    description_variables = pd.read_csv("C:\\Users\\yanni\\OneDrive\\Bureau\\P7_Modelisation_risque_defaut_credit\\description_variable.csv", sep=";")
+    X_test_original = dd.read_parquet("test_preprocess.parquet")
+    X_test_clean = dd.read_parquet("test_set.parquet")
+    description_variables = pd.read_csv("description_variable.csv", sep=";")
 
     if X_test_original is not None and X_test_clean is not None:
         # Sélecteur d'identifiant de client
@@ -623,7 +623,7 @@ if options == "Score Client":
         st.write("Vous avez sélectionné l'identifiant n° :", ID_client)
 
         # Chargement du modèle et prédiction
-        # model_LGBM = pickle.load(open("C:\\Users\\yanni\\OneDrive\\Bureau\\P7_Modelisation_risque_defaut_credit\\pickle_files\\best_model.pickle", "rb"))
+        # model_LGBM = pickle.load(open("pickle_files/best_model.pickle", "rb"))
         # y_pred_lgbm = model_LGBM.predict(X_test_clean.drop(labels="SK_ID_CURR", axis=1))
         # y_pred_lgbm_proba = model_LGBM.predict_proba(X_test_clean.drop(labels="SK_ID_CURR", axis=1))
 
@@ -634,7 +634,7 @@ if options == "Score Client":
         # score_value = round(score.proba_classe_1.iloc[0] * 100, 2)
 
         # Charger le modèle
-        model_LGBM = pickle.load(open("C:\\Users\\yanni\\OneDrive\\Bureau\\P7_Modelisation_risque_defaut_credit\\pickle_files\\best_model.pickle", "rb"))
+        model_LGBM = pickle.load(open("pickle_files/best_model.pickle", "rb"))
         
         # Prédictions
         X_test_clean_pandas = X_test_clean.compute() if hasattr(X_test_clean, 'compute') else X_test_clean
