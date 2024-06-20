@@ -92,7 +92,7 @@ def lecture_X_test_clean():
 ###########################
 # Calcul des valeurs SHAP #
 ###########################
-@st.cache_resource
+@st.cache
 def calcul_valeurs_shap():
     model_LGBM = pickle.load(open("P7_Modelisation_risque_defaut_credit/pickle_files/best_model.pickle", "rb"))
     explainer = shap.TreeExplainer(model_LGBM)
