@@ -1,16 +1,20 @@
+
 dask==2023.4.1
 pyarrow==11.0.0
 fastparquet==0.8.3
 streamlit==1.15.0
-pandas==1.4.4
-numpy==1.23.5
+pandas==1.3.5  # Compatible avec pycaret
+numpy==1.24.3  # Compatible avec tensorflow-intel
 seaborn==0.13.2
-matplotlib== 3.7.5
+matplotlib==3.7.5
 plotly==5.11.0
-scikit-learn== 1.2.2
+scikit-learn==1.2.2
 lightgbm==4.0.0
 shap==0.42.1
 streamlit_shap==1.0.2
 pillow==10.2.0
 xplotter==0.0.6
+Flask==2.2.5  # Compatible avec dash et mlflow
+Werkzeug==2.2.3  # Compatible avec dash
+python-dateutil==2.8.2  # Compatible avec conda-repo-cli et verstack
 
