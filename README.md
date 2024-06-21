@@ -38,9 +38,3 @@ Ce projet, partie du parcours "Data Scientist" d'OpenClassrooms, consiste à imp
 - Expérience avec Python et bibliothèques de data science (pandas, scikit-learn, etc.)
 - Compétences en visualisation de données
 
-## Installation
-
-Clonez ce dépôt sur votre machine locale :
-```bash
-git clone https://github.com/votre-utilisateur/votre-repo.git
-cd votre-repo
