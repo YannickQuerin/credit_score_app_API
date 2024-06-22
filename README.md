@@ -15,7 +15,7 @@ Ce projet, partie du parcours "Data Scientist" d'OpenClassrooms, consiste à imp
 
 ## Source
 
-![Source](P7_Modelisation_risque_defaut_credit/Illustrations_diapos/Diapos_7_P07.png)
+![Source](P7_Modelisation_risque_defaut_credit/Illustrations_diapos/Diapo_7_P07.png)
 
 [Source du projet](https://www.kaggle.com/c/home-credit-default-risk/data)
 
@@ -23,15 +23,15 @@ Ce projet, partie du parcours "Data Scientist" d'OpenClassrooms, consiste à imp
 
 ### Modélisation
 
-![Modélisation](P7_Modelisation_risque_defaut_credit/Illustrations_diapos/Diapos_15_P07.png)
-![Modélisation](P7_Modelisation_risque_defaut_credit/Illustrations_diapos/Diapos_16_P07.png)
-![Modélisation](P7_Modelisation_risque_defaut_credit/Illustrations_diapos/Diapos_17_P07.png)
+![Modélisation](P7_Modelisation_risque_defaut_credit/Illustrations_diapos/Diapo_15_P07.png)
+![Modélisation](P7_Modelisation_risque_defaut_credit/Illustrations_diapos/Diapo_16_P07.png)
+![Modélisation](P7_Modelisation_risque_defaut_credit/Illustrations_diapos/Diapo_17_P07.png)
 
 ### Dashboarding
 
-![Dashboard](P7_Modelisation_risque_defaut_credit/Illustrations_diapos/Diapos_23_P07.png)
-![Dashboard](P7_Modelisation_risque_defaut_credit/Illustrations_diapos/Diapos_24_P07.png)
-![Dashboard](P7_Modelisation_risque_defaut_credit/Illustrations_diapos/Diapos_25_P07.png)
+![Dashboard](P7_Modelisation_risque_defaut_credit/Illustrations_diapos/Diapo_23_P07.png)
+![Dashboard](P7_Modelisation_risque_defaut_credit/Illustrations_diapos/Diapo_24_P07.png)
+![Dashboard](P7_Modelisation_risque_defaut_credit/Illustrations_diapos/Diapo_25_P07.png)
 
 ## Structure du Projet
 
