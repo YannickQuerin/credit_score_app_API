@@ -13,6 +13,26 @@ Ce projet, partie du parcours "Data Scientist" d'OpenClassrooms, consiste à imp
 4. **Évaluer les modèles** : Comparer les performances des modèles en utilisant des métriques appropriées.
 5. **Interpréter et communiquer les résultats** : Présenter les résultats de manière compréhensible pour des non-experts.
 
+## Source
+
+![Source](P7_Modelisation_risque_defaut_credit/Illustrations_diapos/Diapos_7_P07.png)
+
+[Source du projet](https://www.kaggle.com/c/home-credit-default-risk/data)
+
+## Déroulement
+
+### Modélisation
+
+![Modélisation](P7_Modelisation_risque_defaut_credit/Illustrations_diapos/Diapos_15_P07.png)
+![Modélisation](P7_Modelisation_risque_defaut_credit/Illustrations_diapos/Diapos_16_P07.png)
+![Modélisation](P7_Modelisation_risque_defaut_credit/Illustrations_diapos/Diapos_17_P07.png)
+
+### Dashboarding
+
+![Dashboard](P7_Modelisation_risque_defaut_credit/Illustrations_diapos/Diapos_23_P07.png)
+![Dashboard](P7_Modelisation_risque_defaut_credit/Illustrations_diapos/Diapos_24_P07.png)
+![Dashboard](P7_Modelisation_risque_defaut_credit/Illustrations_diapos/Diapos_25_P07.png)
+
 ## Structure du Projet
 
 1. **Contexte** :
