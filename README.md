@@ -33,7 +33,7 @@ Ce projet, partie du parcours "Data Scientist" d'OpenClassrooms, consiste à imp
 
 - Permettre de visualiser le score et l’interprétation de ce score pour chaque client de façon intelligible pour une personne non experte en data science.
 - Visualiser des informations descriptives relatives à un client (via un système de filtre).
-- Le dashboard réalisé avec Streamlit est accessible [en cliquant ici](https://appdashboardapppy-xjlkesdmhuhvtrgsbgeasz.streamlit.app/).
+- Le dashboard réalisé avec Streamlit est accessible [en cliquant ici](https://yannickquerin-p7-dashboard.streamlit.app/).
 
 ![Dashboard](P7_Modelisation_risque_defaut_credit/Illustrations_diapos/Diapo_23_P07.png)
 ![Dashboard](P7_Modelisation_risque_defaut_credit/Illustrations_diapos/Diapo_24_P07.png)
