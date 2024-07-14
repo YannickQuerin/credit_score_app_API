@@ -1,0 +1,218 @@
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.8.8
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.2.2
+mlflow_version: 2.14.2
+model_size_bytes: 651
+model_uuid: cfb087f6b42f4f5ba4386c895265eac7
+signature:
+  inputs: '[{"type": "double", "name": "CREDIT_TO_ANNUITY_RATIO", "required": false},
+    {"type": "double", "name": "AMT_REQ_CREDIT_BUREAU_MON", "required": false}, {"type":
+    "double", "name": "AMT_REQ_CREDIT_BUREAU_QRT", "required": false}, {"type": "double",
+    "name": "INSTAL_AMT_PAYMENT_DIFF_MIN", "required": false}, {"type": "double",
+    "name": "POS_CNT_INSTALMENT_MIN", "required": false}, {"type": "double", "name":
+    "PREV_WEEKDAY_APPR_PROCESS_START_SUNDAY_MEAN", "required": false}, {"type": "double",
+    "name": "PREV_DAYS_FIRST_DRAWING_MEAN", "required": false}, {"type": "double",
+    "name": "CC_AMT_DRAWINGS_ATM_CURRENT_MEAN", "required": false}, {"type": "double",
+    "name": "PREV_APPLICATION_AMT_TO_DECISION_RATIO_MIN", "required": false}, {"type":
+    "double", "name": "PREV_AMT_APPLICATION_MIN", "required": false}, {"type": "double",
+    "name": "CC_AMT_DRAWINGS_ATM_CURRENT_VAR", "required": false}, {"type": "double",
+    "name": "INS_D365AMT_PAYMENT_DIFF_MAX", "required": false}, {"type": "double",
+    "name": "CC_AMT_DRAWINGS_CURRENT_VAR", "required": false}, {"type": "double",
+    "name": "PREV_CODE_REJECT_REASON_SCO_MEAN", "required": false}, {"type": "double",
+    "name": "OCCUPATION_TYPE_CORESTAFF", "required": false}, {"type": "double", "name":
+    "PREV_NAME_PORTFOLIO_XNA_MEAN", "required": false}, {"type": "double", "name":
+    "FLAG_DOCUMENT_18", "required": false}, {"type": "double", "name": "CC_AMT_DRAWINGS_ATM_CURRENT_SUM",
+    "required": false}, {"type": "double", "name": "FLAG_WORK_PHONE", "required":
+    false}, {"type": "double", "name": "NONLIVINGAPARTMENTS_AVG", "required": false},
+    {"type": "double", "name": "CC_AMT_DRAWINGS_ATM_CURRENT_MAX", "required": false},
+    {"type": "double", "name": "PREV_CODE_REJECT_REASON_LIMIT_MEAN", "required": false},
+    {"type": "double", "name": "CC_CNT_DRAWINGS_ATM_CURRENT_SUM", "required": false},
+    {"type": "double", "name": "INS_D365NUM_INSTALMENT_VERSION_NUNIQUE", "required":
+    false}, {"type": "double", "name": "FLAG_PHONE", "required": false}, {"type":
+    "double", "name": "WALLSMATERIAL_MODE_PANEL", "required": false}, {"type": "double",
+    "name": "PREV_CODE_REJECT_REASON_CLIENT_MEAN", "required": false}, {"type": "double",
+    "name": "CC_MIN_PAYMENT_RATIO_SUM", "required": false}, {"type": "double", "name":
+    "PREV_CODE_REJECT_REASON_HC_MEAN", "required": false}, {"type": "double", "name":
+    "CC_CNT_DRAWINGS_CURRENT_MAX", "required": false}, {"type": "double", "name":
+    "PREV_WEEKDAY_APPR_PROCESS_START_SATURDAY_MEAN", "required": false}, {"type":
+    "double", "name": "INS_D365AMT_PAYMENT_DIFF_MEAN", "required": false}, {"type":
+    "double", "name": "CC_AMT_DRAWINGS_POS_CURRENT_MAX", "required": false}, {"type":
+    "double", "name": "CC_CNT_DRAWING_SUM_MAX", "required": false}, {"type": "double",
+    "name": "INS_D365AMT_PAYMENT_RATIO_MIN", "required": false}, {"type": "double",
+    "name": "AMT_REQ_CREDIT_BUREAU_YEAR", "required": false}, {"type": "double", "name":
+    "CC_AMT_CREDIT_LIMIT_ACTUAL_VAR", "required": false}, {"type": "double", "name":
+    "CC_CNT_DRAWINGS_ATM_CURRENT_VAR", "required": false}, {"type": "double", "name":
+    "CC_AMT_PAYMENT_CURRENT_MAX", "required": false}, {"type": "double", "name": "OCCUPATION_TYPE_DRIVERS",
+    "required": false}, {"type": "double", "name": "CC_AMT_INTEREST_RECEIVABLE_VAR",
+    "required": false}, {"type": "double", "name": "PREV_WEEKDAY_APPR_PROCESS_START_FRIDAY_MEAN",
+    "required": false}, {"type": "double", "name": "POS_COMPLETED_BEFORE_MEAN", "required":
+    false}, {"type": "double", "name": "ENTRANCES_AVG", "required": false}, {"type":
+    "double", "name": "PREV_DAYS_LAST_DUE_MAX", "required": false}, {"type": "double",
+    "name": "PREV_WEEKDAY_APPR_PROCESS_START_WEDNESDAY_MEAN", "required": false},
+    {"type": "double", "name": "REG_CITY_NOT_LIVE_CITY", "required": false}, {"type":
+    "double", "name": "PREV_WEEKDAY_APPR_PROCESS_START_TUESDAY_MEAN", "required":
+    false}, {"type": "double", "name": "YEARS_BUILD_AVG", "required": false}, {"type":
+    "double", "name": "CC_AMT_DRAWINGS_CURRENT_SUM", "required": false}, {"type":
+    "double", "name": "OCCUPATION_TYPE_LABORERS", "required": false}, {"type": "double",
+    "name": "PREV_CODE_REJECT_REASON_SCOFR_MEAN", "required": false}, {"type": "double",
+    "name": "POS_SK_DPD_MEAN", "required": false}, {"type": "double", "name": "INS_D365AMT_PAYMENT_DIFF_MIN",
+    "required": false}, {"type": "double", "name": "OCCUPATION_TYPE_ACCOUNTANTS",
+    "required": false}, {"type": "double", "name": "CC_CNT_DRAWINGS_ATM_CURRENT_MAX",
+    "required": false}, {"type": "double", "name": "PREV_INTEREST_CREDIT_MEAN", "required":
+    false}, {"type": "double", "name": "PREV_NAME_CONTRACT_STATUS_LAST", "required":
+    false}, {"type": "double", "name": "WEEKDAY_APPR_PROCESS_START_SATURDAY", "required":
+    false}, {"type": "double", "name": "CC_SK_DPD_DEF_MAX", "required": false}, {"type":
+    "double", "name": "CC_AMT_INST_MIN_REGULARITY_MIN", "required": false}, {"type":
+    "double", "name": "CC_SK_ID_PREV_VAR", "required": false}, {"type": "double",
+    "name": "WEEKDAY_APPR_PROCESS_START_THURSDAY", "required": false}, {"type": "double",
+    "name": "NAME_TYPE_SUITE_SPOUSEPARTNER", "required": false}, {"type": "double",
+    "name": "NAME_FAMILY_STATUS_CIVILMARRIAGE", "required": false}, {"type": "double",
+    "name": "NAME_TYPE_SUITE_UNACCOMPANIED", "required": false}, {"type": "double",
+    "name": "OCCUPATION_TYPE_MANAGERS", "required": false}, {"type": "double", "name":
+    "PREV_NFLAG_INSURED_ON_APPROVAL_SUM", "required": false}, {"type": "double", "name":
+    "PREV_INTEREST_CREDIT_PRIVILEGED_MEAN", "required": false}, {"type": "double",
+    "name": "CC_AMT_DRAWINGS_CURRENT_MIN", "required": false}, {"type": "double",
+    "name": "FLAG_EMAIL", "required": false}, {"type": "double", "name": "FLAG_OWN_REALTY",
+    "required": false}, {"type": "double", "name": "CC_CNT_DRAWINGS_OTHER_CURRENT_VAR",
+    "required": false}, {"type": "double", "name": "OCCUPATION_TYPE_CLEANINGSTAFF",
+    "required": false}, {"type": "double", "name": "PREV_NFLAG_LAST_APPL_IN_DAY_MEAN",
+    "required": false}, {"type": "double", "name": "NAME_HOUSING_TYPE_WITHPARENTS",
+    "required": false}, {"type": "double", "name": "CC_CNT_DRAWINGS_CURRENT_MIN",
+    "required": false}, {"type": "double", "name": "WEEKDAY_APPR_PROCESS_START_TUESDAY",
+    "required": false}, {"type": "double", "name": "HOUSETYPE_MODE_SPECIFICHOUSING",
+    "required": false}, {"type": "double", "name": "EXT_SOURCE_3", "required": false},
+    {"type": "double", "name": "REG_CITY_NOT_WORK_CITY", "required": false}, {"type":
+    "double", "name": "NAME_HOUSING_TYPE_RENTEDAPARTMENT", "required": false}, {"type":
+    "double", "name": "CC_AMT_DRAWINGS_CURRENT_MEAN", "required": false}, {"type":
+    "double", "name": "CC_AMT_DRAWINGS_OTHER_CURRENT_MAX", "required": false}, {"type":
+    "double", "name": "FLOORSMIN_AVG", "required": false}, {"type": "double", "name":
+    "CC_BALANCE_LIMIT_RATIO_MIN", "required": false}, {"type": "double", "name": "CC_SK_DPD_MAX",
+    "required": false}, {"type": "double", "name": "PREV_FLAG_LAST_APPL_PER_CONTRACT_SUM",
+    "required": false}, {"type": "double", "name": "OCCUPATION_TYPE_HIGHSKILLTECHSTAFF",
+    "required": false}, {"type": "double", "name": "CC_AMT_INTEREST_RECEIVABLE_MIN",
+    "required": false}, {"type": "double", "name": "NAME_HOUSING_TYPE_OFFICEAPARTMENT",
+    "required": false}, {"type": "double", "name": "CC_AMT_CREDIT_LIMIT_ACTUAL_MAX",
+    "required": false}, {"type": "double", "name": "CC_AMT_CREDIT_LIMIT_ACTUAL_MIN",
+    "required": false}, {"type": "double", "name": "POS_CNT_INSTALMENT_FUTURE_MIN",
+    "required": false}, {"type": "double", "name": "CC_AMT_BALANCE_MIN", "required":
+    false}, {"type": "double", "name": "OCCUPATION_TYPE_LOWSKILLLABORERS", "required":
+    false}, {"type": "double", "name": "OCCUPATION_TYPE_NAN", "required": false},
+    {"type": "double", "name": "WEEKDAY_APPR_PROCESS_START_WEDNESDAY", "required":
+    false}, {"type": "double", "name": "CC_AMT_BALANCE_SUM", "required": false}, {"type":
+    "double", "name": "CNT_CHILDREN", "required": false}, {"type": "double", "name":
+    "OCCUPATION_TYPE_MEDICINESTAFF", "required": false}, {"type": "double", "name":
+    "CC_AMT_DRAWINGS_POS_CURRENT_MIN", "required": false}, {"type": "double", "name":
+    "PREV_CODE_REJECT_REASON_VERIF_MEAN", "required": false}, {"type": "double", "name":
+    "FLAG_DOCUMENT_11", "required": false}, {"type": "double", "name": "WEEKDAY_APPR_PROCESS_START_SUNDAY",
+    "required": false}, {"type": "double", "name": "CC_MONTHS_BALANCE_MAX", "required":
+    false}, {"type": "double", "name": "OCCUPATION_TYPE_SALESSTAFF", "required": false},
+    {"type": "double", "name": "CC_MIN_PAYMENT_RATIO_MEAN", "required": false}, {"type":
+    "double", "name": "PREV_NAME_YIELD_GROUP_LAST", "required": false}, {"type": "double",
+    "name": "POS_LATE_PAYMENT_MEAN", "required": false}, {"type": "double", "name":
+    "INS_D365AMT_INSTALMENT_SUM", "required": false}, {"type": "double", "name": "INSTAL_DAYS_INSTALMENT_MAX",
+    "required": false}, {"type": "double", "name": "PREV_SELLERPLACE_AREA_MEAN", "required":
+    false}, {"type": "double", "name": "INS_D365DAYS_PAYMENT_DIFF_MEAN", "required":
+    false}, {"type": "double", "name": "PREV_DAYS_DECISION_MAX", "required": false},
+    {"type": "double", "name": "CODE_GENDER", "required": false}, {"type": "double",
+    "name": "PREV_ANNUITY_GOODS_MEAN", "required": false}, {"type": "double", "name":
+    "PREV_INTEREST_SHARE_MEAN", "required": false}, {"type": "double", "name": "INSTAL_NUM_INSTALMENT_VERSION_MEAN",
+    "required": false}, {"type": "double", "name": "POS_CNT_INSTALMENT_MEAN", "required":
+    false}, {"type": "double", "name": "PREV_AMT_ANNUITY_MIN", "required": false},
+    {"type": "double", "name": "PREV_AMT_DOWN_PAYMENT_MEAN", "required": false}, {"type":
+    "double", "name": "INS_D365AMT_INSTALMENT_MEAN", "required": false}, {"type":
+    "double", "name": "INSTAL_AMT_PAYMENT_DIFF_MEAN", "required": false}, {"type":
+    "double", "name": "AMT_INCOME_TOTAL", "required": false}, {"type": "double", "name":
+    "PREV_APPLICATION_AMT_TO_DECISION_RATIO_MEAN", "required": false}, {"type": "double",
+    "name": "PREV_NAME_CONTRACT_STATUS_MEAN", "required": false}, {"type": "double",
+    "name": "PREV_AMT_CREDIT_GOODS_RATIO_MIN", "required": false}, {"type": "double",
+    "name": "EXT_SOURCE_1", "required": false}, {"type": "double", "name": "PREV_AMT_CREDIT_GOODS_RATIO_MAX",
+    "required": false}, {"type": "double", "name": "DAYS_BIRTH", "required": false},
+    {"type": "double", "name": "INSTAL_DAYS_PAYMENT_DIFF_MEAN", "required": false},
+    {"type": "double", "name": "PREV_AMT_ANNUITY_SUM", "required": false}, {"type":
+    "double", "name": "OWN_CAR_AGE", "required": false}, {"type": "double", "name":
+    "PREV_LOAN_RATE_MAX", "required": false}, {"type": "double", "name": "PREV_AMT_ANNUITY_MEAN",
+    "required": false}, {"type": "double", "name": "INCOME_TO_CREDIT_RATIO", "required":
+    false}, {"type": "double", "name": "PREV_SELLERPLACE_AREA_MAX", "required": false},
+    {"type": "double", "name": "INSTAL_DAYS_PAYMENT_DIFF_MAX", "required": false},
+    {"type": "double", "name": "AMT_ANNUITY", "required": false}, {"type": "double",
+    "name": "PREV_INTEREST_SHARE_MAX", "required": false}, {"type": "double", "name":
+    "DAYS_ID_PUBLISH", "required": false}, {"type": "double", "name": "INSTAL_DAYS_PAYMENT_RATIO_MAX",
+    "required": false}, {"type": "double", "name": "DAYS_EMPLOYED", "required": false},
+    {"type": "double", "name": "POS_REMAINING_INSTALMENTS", "required": false}, {"type":
+    "double", "name": "INSTAL_AMT_INSTALMENT_SUM", "required": false}, {"type": "double",
+    "name": "AMT_CREDIT", "required": false}, {"type": "double", "name": "ANNUITY_INCOME_PERC",
+    "required": false}, {"type": "double", "name": "INSTAL_DAYS_INSTALMENT_MIN", "required":
+    false}, {"type": "double", "name": "POS_MONTHS_BALANCE_SIZE", "required": false},
+    {"type": "double", "name": "REGION_POPULATION_RELATIVE", "required": false}, {"type":
+    "double", "name": "INSTAL_AMT_INSTALMENT_MAX", "required": false}, {"type": "double",
+    "name": "PREV_AMT_CREDIT_GOODS_RATIO_MEAN", "required": false}, {"type": "double",
+    "name": "INS_D365DAYS_PAYMENT_DIFF_MIN", "required": false}, {"type": "double",
+    "name": "DAYS_REGISTRATION", "required": false}, {"type": "double", "name": "INSTAL_DAYS_PAYMENT_RATIO_MIN",
+    "required": false}, {"type": "double", "name": "DAYS_LAST_PHONE_CHANGE", "required":
+    false}, {"type": "double", "name": "LIVINGAPARTMENTS_AVG", "required": false},
+    {"type": "double", "name": "PREV_AMT_APPLICATION_TO_SELLERPLACE_AREA_MEAN", "required":
+    false}, {"type": "double", "name": "INSTAL_NUM_INSTALMENT_VERSION_SUM", "required":
+    false}, {"type": "double", "name": "PREV_HOUR_APPR_PROCESS_START_MEAN", "required":
+    false}, {"type": "double", "name": "INSTAL_DAYS_PAYMENT_RATIO_MEAN", "required":
+    false}, {"type": "double", "name": "PREV_DAYS_FIRST_DUE_MEAN", "required": false},
+    {"type": "double", "name": "YEARS_BEGINEXPLUATATION_AVG", "required": false},
+    {"type": "double", "name": "APARTMENTS_AVG", "required": false}, {"type": "double",
+    "name": "BASEMENTAREA_AVG", "required": false}, {"type": "double", "name": "INS_D365SK_ID_CURR_COUNT",
+    "required": false}, {"type": "double", "name": "NAME_FAMILY_STATUS_MARRIED", "required":
+    false}, {"type": "double", "name": "CC_BALANCE_LIMIT_RATIO_MAX", "required": false},
+    {"type": "double", "name": "HOUR_APPR_PROCESS_START", "required": false}, {"type":
+    "double", "name": "CC_AMT_CREDIT_LIMIT_ACTUAL_SUM", "required": false}, {"type":
+    "double", "name": "CC_SK_ID_PREV_MIN", "required": false}, {"type": "double",
+    "name": "POS_TOTAL_TERM_LAST", "required": false}, {"type": "double", "name":
+    "FLOORSMAX_AVG", "required": false}, {"type": "double", "name": "DEF_30_CNT_SOCIAL_CIRCLE",
+    "required": false}, {"type": "double", "name": "NONLIVINGAREA_AVG", "required":
+    false}, {"type": "double", "name": "POS_SK_DPD_DEF_MEAN", "required": false},
+    {"type": "double", "name": "PREV_CODE_REJECT_REASON_XAP_MEAN", "required": false},
+    {"type": "double", "name": "FLAG_OWN_CAR", "required": false}, {"type": "double",
+    "name": "INS_D365AMT_PAYMENT_RATIO_MEAN", "required": false}, {"type": "double",
+    "name": "PREV_WEEKDAY_APPR_PROCESS_START_MONDAY_MEAN", "required": false}, {"type":
+    "double", "name": "PREV_AMT_CREDIT_GOODS_DIFF_SUM", "required": false}, {"type":
+    "double", "name": "NAME_CONTRACT_TYPE", "required": false}, {"type": "double",
+    "name": "PREV_INTEREST_SHARE_MIN", "required": false}, {"type": "double", "name":
+    "INSTAL_AMT_PAYMENT_RATIO_MIN", "required": false}, {"type": "double", "name":
+    "INSTAL_AMT_PAYMENT_DIFF_MAX", "required": false}, {"type": "double", "name":
+    "CC_MIN_PAYMENT_RATIO_MAX", "required": false}, {"type": "double", "name": "CC_AMT_BALANCE_MAX",
+    "required": false}, {"type": "double", "name": "PREV_WEEKDAY_APPR_PROCESS_START_THURSDAY_MEAN",
+    "required": false}, {"type": "double", "name": "OBS_30_CNT_SOCIAL_CIRCLE", "required":
+    false}, {"type": "double", "name": "CC_SK_ID_PREV_SUM", "required": false}, {"type":
+    "double", "name": "PREV_AMT_CREDIT_GOODS_DIFF_MEAN", "required": false}, {"type":
+    "double", "name": "FLAG_DOCUMENT_3", "required": false}, {"type": "double", "name":
+    "COMMONAREA_AVG", "required": false}, {"type": "double", "name": "PREV_CNT_PAYMENT_MEAN",
+    "required": false}, {"type": "double", "name": "PREV_AMT_CREDIT_APPLICATION_RATIO_MEAN",
+    "required": false}, {"type": "double", "name": "LANDAREA_AVG", "required": false},
+    {"type": "double", "name": "INSTAL_DAYS_PAYMENT_DIFF_MIN", "required": false},
+    {"type": "double", "name": "PREV_AMT_APPLICATION_MEAN", "required": false}, {"type":
+    "double", "name": "PREV_DAYS_LAST_DUE_MEAN", "required": false}, {"type": "double",
+    "name": "INSTAL_AMT_INSTALMENT_MEAN", "required": false}, {"type": "double", "name":
+    "PREV_ANNUITY_MEAN", "required": false}, {"type": "double", "name": "PREV_AMT_DECLINED_MEAN",
+    "required": false}, {"type": "double", "name": "PREV_AMT_GOODS_PRICE_MIN", "required":
+    false}, {"type": "double", "name": "INSTAL_NUM_INSTALMENT_NUMBER_MAX", "required":
+    false}, {"type": "double", "name": "PREV_RATE_DOWN_PAYMENT_MEAN", "required":
+    false}, {"type": "double", "name": "PREV_NAME_YIELD_GROUP_MEAN", "required": false},
+    {"type": "double", "name": "CC_CNT_DRAWINGS_ATM_CURRENT_MEAN", "required": false},
+    {"type": "double", "name": "POS_LOAN_COMPLETED_MEAN", "required": false}, {"type":
+    "double", "name": "PREV_AMT_DECLINED_SUM", "required": false}, {"type": "double",
+    "name": "INSTAL_AMT_INSTALMENT_MIN", "required": false}, {"type": "double", "name":
+    "INSTAL_AMT_PAYMENT_RATIO_MEAN", "required": false}, {"type": "double", "name":
+    "CC_CNT_DRAWINGS_CURRENT_VAR", "required": false}, {"type": "double", "name":
+    "PREV_LOAN_RATE_MEAN", "required": false}, {"type": "double", "name": "PREV_DAYS_DECISION_MEAN",
+    "required": false}, {"type": "double", "name": "EXT_SOURCE_2", "required": false}]'
+  outputs: '[{"type": "long", "name": "TARGET", "required": true}]'
+  params: null
+utc_time_created: '2024-07-12 10:48:20.741792'

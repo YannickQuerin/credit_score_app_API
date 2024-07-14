@@ -1,6 +1,7 @@
+import os
 import pickle
-import numpy as np
 
+import numpy as np
 import pandas as pd
 import dask.dataframe as dd
 
@@ -8,7 +9,10 @@ from flask import Flask, render_template, request
 import secrets
 
 # Load the model
-model = pickle.load(open("C:\\Users\\yanni\\OneDrive\\Bureau\\P7_Modelisation_risque_defaut_credit\\mlruns\\968964749954438347\\6e7635adf94c4fd79c6369a05600d325\\artifacts\\model\\model.pkl", "rb"))
+model_path = "C:\\Users\\yanni\\OneDrive\\Bureau\\P7_Modelisation_risque_defaut_credit\\credit_score_app_API\\mlruns\\968964749954438347\\6e7635adf94c4fd79c6369a05600d325\\artifacts\\model\\model.pkl"
+
+# Chargement du modèle
+model = pickle.load(open(model_path, "rb"))
 
 # Load the data
 df = pickle.load(open("C:\\Users\\yanni\\OneDrive\\Bureau\\P7_Modelisation_risque_defaut_credit\\pickle_files\\train_set.pickle", "rb"))
