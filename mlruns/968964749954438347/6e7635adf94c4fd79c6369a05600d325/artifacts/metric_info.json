@@ -1,6 +1,0 @@
-{
-  "LGBMClassifier_score-2_unknown_dataset": "LGBMClassifier.score(X=<DataFrame>, y=y_test)",
-  "LGBMClassifier_score_X_test": "LGBMClassifier.score(X=X_test, y=y_test)",
-  "accuracy_score_X_test": "accuracy_score(y_true=y_test, y_pred=<ndarray>)",
-  "fbeta_score_X_test": "fbeta_score(y_true=y_test, y_pred=<ndarray>, beta=2)"
-}
