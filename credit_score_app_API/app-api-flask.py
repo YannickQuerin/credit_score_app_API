@@ -15,7 +15,8 @@ model_path = "C:\\Users\\yanni\\OneDrive\\Bureau\\P7_Modelisation_risque_defaut_
 model = pickle.load(open(model_path, "rb"))
 
 # Load the data
-df = pickle.load(open("C:\\Users\\yanni\\OneDrive\\Bureau\\P7_Modelisation_risque_defaut_credit\\pickle_files\\train_set.pickle", "rb"))
+df = pd.read_parquet('C:\\Users\\yanni\\OneDrive\\Bureau\\P7_Modelisation_risque_defaut_credit\\train_set.parquet')
+#df = pickle.load(open("C:\\Users\\yanni\\OneDrive\\Bureau\\P7_Modelisation_risque_defaut_credit\\pickle_files\\train_set.pickle", "rb"))
 
 # Copie du jeu de données
 train_set = df.copy()
