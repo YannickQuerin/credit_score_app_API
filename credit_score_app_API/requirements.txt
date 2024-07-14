@@ -1,5 +1,0 @@
-dask==2024.5.0
-Flask==2.2.5
-numpy==2.0.0
-pandas==2.2.2
-gunicorn
