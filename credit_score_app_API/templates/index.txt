@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prédiction de Défaut de Paiement</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Prédiction de Défaut de Paiement</h1>
+        <form method="POST">
+            <label for="id_client">Entrez l'ID du Client :</label>
+            <input type="text" id="id_client" name="id_client" required>
+            <button type="submit">Prédire</button>
+        </form>
+        {% if prediction_text %}
+            <div class="{% if 'NON Accordé' in prediction_text %}error{% elif 'répertorié' in prediction_text %}warning{% else %}success{% endif %}">
+                <p>Prédiction : {{ prediction_text }}</p>
+                {% if probability is not none %}
+                    <p>Probabilité de défaut de paiement : {{ probability * 100 }}%</p>
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
