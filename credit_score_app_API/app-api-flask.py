@@ -9,13 +9,13 @@ from flask import Flask, render_template, request
 import secrets
 
 # Load the model
-model_path = "C:\\Users\\yanni\\OneDrive\\Bureau\\P7_Modelisation_risque_defaut_credit\\credit_score_app_API\\mlruns\\968964749954438347\\6e7635adf94c4fd79c6369a05600d325\\artifacts\\model\\model.pkl"
+model_path = "./credit_score_app_API/mlruns/968964749954438347/6e7635adf94c4fd79c6369a05600d325/artifacts/model/model.pkl"
 
 # Chargement du modèle
 model = pickle.load(open(model_path, "rb"))
 
 # Load the data
-df = pd.read_parquet('C:\\Users\\yanni\\OneDrive\\Bureau\\P7_Modelisation_risque_defaut_credit\\train_set.parquet')
+df = pd.read_parquet('./credit_score_app_API/train_set.parquet')
 #df = pickle.load(open("C:\\Users\\yanni\\OneDrive\\Bureau\\P7_Modelisation_risque_defaut_credit\\pickle_files\\train_set.pickle", "rb"))
 
 # Copie du jeu de données
