@@ -13,6 +13,7 @@ google-auth==2.25.2
 google-auth-oauthlib==1.2.0
 google-pasta==0.2.0
 grpcio==1.60.0
+gunicorn==20.1.0
 h5py==3.10.0
 idna==3.6
 joblib==1.4.2
@@ -53,6 +54,7 @@ six==1.16.0
 slicer==0.0.8
 tensorboard==2.17.0
 tensorboard-data-server==0.7.2
+tensorflow==2.15.0
 termcolor==2.4.0
 threadpoolctl==3.5.0
 tqdm==4.66.4
