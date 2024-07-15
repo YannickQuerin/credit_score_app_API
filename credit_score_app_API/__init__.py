@@ -1,6 +1,5 @@
 from flask import Flask
-from .app_API import app
-#from . import models
+from .app-api-flask import app
 
 #Config options - Make sure you created a 'config.py' file.
 app.config.from_object('config')
